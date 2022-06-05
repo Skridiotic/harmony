@@ -1,0 +1,10 @@
+command /harmony:
+    aliases: /har
+    permission: harmony.execute
+    trigger:
+        create a gui with virtual chest inventory named Harmony // Beta 0.0.1 (Untested)" with 3 rows:
+        edit the player's gui:
+            make gui 4 with paper named "Update Harmony" with lore "Once harmony releases, update it here.":
+                delete file "plugins/Skript/scripts/Harmony.sk"
+                download file from "https://github.com/Skridiotic/harmony/releases/download/release/Harmony.sk" to file "plugins\\Skript\\scripts\\Harmony.sk"
+                execute console command "/skript reload Harmony"
