@@ -2,5 +2,5 @@ command /harmony:
     aliases: /har
     trigger:
         delete file "plugins/Skript/scripts/Harmony.sk"
-        download file from "https://github.com/Skridiotic/harmony/raw/main/Harmony.sk to file "plugins/Skript/scripts/Harmony.sk"
+        download file from "https://github.com/Skridiotic/harmony/raw/main/Harmony.sk" to file "plugins/Skript/scripts/Harmony.sk"
         execute console command "/skript reload Harmony"
