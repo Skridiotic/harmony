@@ -6,12 +6,12 @@ command /harmony [<text>]:
         else if arg-1 is "update":
             delete file "plugins/Skript/scripts/Harmony.sk"
             download file from "https://github.com/Skridiotic/harmony/raw/main/Harmony.sk" to file "plugins/Skript/scripts/Harmony.sk"
-            execute console command "/skript reload Harmony"
+            execute console command "skript reload Harmony"
         else if arg-1 is "apply":
             send "[§dharmony§r] The server is about to restart for a plugin install." to all players
-            execute console command "/hrestop"
+            execute console command "hrestop"
         else:
-            make player execute command "/har"
+            make player execute command "har"
 
 on tab complete of "/harmony":
     set tab completions for position 1 to "update" and "apply"
@@ -20,7 +20,7 @@ on tab complete of "/har":
     set tab completions for position 1 to "update" and "apply"
 
 command /hrestop:
-	permission: griddle.admin.restop
+	permission: harmony.dontgive.restop
 	permission message: "§cE§r: You don't have permission to use restop."
 	trigger:
 		send "[§dharmony§r] The server will be restarted in §b1 minute§r. §oEverything§r will be saved, start wrapping up if you're doing something." to all players
@@ -36,5 +36,5 @@ command /hrestop:
 		send "[§dharmony§r] The server will be restarted in §42 seconds§r." to all players
 		wait 1 second
 		send "[§dharmony§r] The server will be restarted in §01 second§r." to all players
-		execute console command "/save-all"
-		execute console command "/stop"
+		execute console command "save-all"
+		execute console command "stop"
