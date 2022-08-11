@@ -7,6 +7,7 @@ command /harmony [<text>]:
             delete file "plugins/Skript/scripts/Harmony.sk"
             download file from "https://github.com/Skridiotic/harmony/raw/main/Harmony.sk" to file "plugins/Skript/scripts/Harmony.sk"
             execute console command "skript reload Harmony"
+			send "[§dharmony§r] Update successful."
         else if arg-1 is "apply":
             send "[§dharmony§r] The server is about to restart for a plugin install." to all players
             execute console command "hrestop"
